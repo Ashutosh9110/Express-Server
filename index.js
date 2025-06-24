@@ -1,12 +1,12 @@
   const express = require("express")
   const app = express()
   const productRouter = require("./routes/productsRoutes")
-  const userRouter = require("./routes/userRoutes")
-  const cartRouter = require("./routes/cartRoutes")
+  // const userRouter = require("./routes/userRoutes")
+  // const cartRouter = require("./routes/cartRoutes")
 
-  app.use("/users", userRouter)
+  // app.use("/users", userRouter)
   app.use("/products", productRouter)
-  app.use("/cart", cartRouter)
+  // app.use("/cart", cartRouter)
 
   app.get("/", (req, res) => {
     res.send("Welcome Home")
