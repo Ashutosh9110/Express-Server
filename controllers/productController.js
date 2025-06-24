@@ -13,7 +13,15 @@ const addProduct = (req, res) => {
   res.send("Adding a new product")
 }
 
+const postProducts = (req, res) => {
+
+  const data = req.body
+  console.log(data);
+
+
+  res.json({ value:data.productName})
+}
 
 module.exports = { 
-  getAllProducts, getProductById, addProduct
+  getAllProducts, getProductById, addProduct, postProducts
 }

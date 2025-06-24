@@ -5,6 +5,11 @@
   // const cartRouter = require("./routes/cartRoutes")
 
   // app.use("/users", userRouter)
+
+
+  app.use(express.static("public"))
+  app.use(express.json())
+
   app.use("/api/products", productRouter)
   // app.use("/cart", cartRouter)
 
