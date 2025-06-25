@@ -1,7 +1,7 @@
   const express = require("express")
   const app = express()
   const productRouter = require("./routes/productsRoutes")
-  // const userRouter = require("./routes/userRoutes")
+  const userRouter = require("./routes/userRoutes")
   // const cartRouter = require("./routes/cartRoutes")
 
   // app.use("/users", userRouter)
@@ -11,6 +11,8 @@
   app.use(express.json())
 
   app.use("/api/products", productRouter)
+  app.use("/users", userRouter)
+
   // app.use("/cart", cartRouter)
 
   app.get("/", (req, res) => {
